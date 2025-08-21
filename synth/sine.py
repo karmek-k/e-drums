@@ -7,8 +7,6 @@ from synth.base import BaseSynth
 class SineSynth(BaseSynth):
     """Synthesizer that generates a constant sine wave."""
 
-    sampling_rate = DEFAULT_SAMPLING_RATE
-
     def __init__(self, frequency):
         self.frequency = frequency
 
