@@ -7,11 +7,12 @@ class BaseSynth:
     """Base class for synthesizers."""
 
     sampling_rate = DEFAULT_SAMPLING_RATE
+    time_unit = 1000
 
     def generate(self, length):
         """Generate a buffer of synthesized samples."""
 
-        buffer = np.zeros(self.sampling_rate * length)
+        buffer = np.zeros(self.sampling_rate * length // self.time_unit)
 
         for sample_idx in range(buffer.shape[0]):
             t = sample_idx / self.sampling_rate  # sample time in seconds
