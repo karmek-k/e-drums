@@ -13,10 +13,10 @@ synth = SineSynth(frequency)
 buffer = synth.generate(length)
 
 # Fade out
-sqrt_tension = 4
+tension = 3
 
 fade_buffer = np.linspace(1.0, 0.00001, buffer.shape[0])
-fade_buffer = np.sqrt(fade_buffer ** sqrt_tension)
+fade_buffer = fade_buffer ** tension
 buffer *= fade_buffer
 
 # Play
