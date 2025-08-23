@@ -5,8 +5,8 @@ from synth.sine import SineSynth
 
 
 # Parameters
-length = 1000
-frequency = 220.0
+length = 1000  # milliseconds
+frequency = 220.0  # Hz
 
 # Synthesize
 synth = SineSynth(frequency)
