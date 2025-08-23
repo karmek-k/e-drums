@@ -8,6 +8,15 @@ Generates sound using science and logic.
 - fade out an existing waveform
 - playback (`sounddevice` library)
 
+## Running
+
+Install dependencies using [`uv`](https://docs.astral.sh/uv/) first.
+
+```shell
+uv sync
+uv run main.py
+```
+
 ## Waveform
 
 It looks like this (it's not the exact formula used). In reality, the sine wave is generated first,
